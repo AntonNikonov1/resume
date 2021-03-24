@@ -1,0 +1,34 @@
+.tag {
+    font-weight: 700;
+}
+
+.attribute {
+    color: $yellow;
+    font-weight: 500;
+
+    margin-left: 10px;
+}
+
+.equal-sign {
+    color: $violet;
+}
+
+.attribute-value {
+    color: $green;
+}
+
+.comment {
+    color: $grey;
+
+    &__text {
+        font-style: italic;
+    }
+
+    &__left-side {
+        margin-right: 10px;
+    }
+
+    &__right-side {
+        margin-left: 10px;
+    }
+}

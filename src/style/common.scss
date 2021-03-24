@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    color: $white;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: $black;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+.container {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.title {
+    color: $blue;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.subtitle-list {
+    margin-top: 15px;
+}
+
+.subtitle-item + .subtitle-item {
+    margin-top: 10px;
+}

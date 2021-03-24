@@ -1,0 +1,16 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+
+    margin-left: 150px;
+
+    &__title {
+        color: $blue;
+        font-size: 24px;
+
+        margin-bottom: 15px;
+    }
+}

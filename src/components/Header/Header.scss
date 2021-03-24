@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-color: $black;
+    box-shadow: -4px 6px 45px 40px #0e1212;
+
+    width: $desktop;
+
+    padding: 20px 0;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        &-logo {
+            color: $blue;
+        }
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            cursor: pointer;
+            transition: .3s;
+            
+            &:hover,
+            &:active,
+            &:focus {
+                color: $blue;
+            }
+        }
+
+        &-item + &-item {
+            margin-left: 25px;
+
+        }
+    }
+}

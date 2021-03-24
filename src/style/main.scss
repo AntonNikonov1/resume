@@ -1,0 +1,10 @@
+// Common
+@import './reset.scss';
+@import './vars.scss';
+@import './common.scss';
+
+// Components
+@import '../components/Header/Header.scss';
+@import '../components/HtmlTag/HtmlTag.scss';
+@import '../components/Welcome/Welcome.scss';
+@import '../components/AboutMe/AboutMe.scss';
