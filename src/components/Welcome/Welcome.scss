@@ -1,10 +1,11 @@
 .welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
 
-    height: 100vh;
+    // height: 100vh;
 
+    margin-top: calc(50vh);
     margin-left: 150px;
 
     &__title {
@@ -12,5 +13,9 @@
         font-size: 24px;
 
         margin-bottom: 15px;
+    }
+
+    &__tag {
+        font-weight: 700;
     }
 }

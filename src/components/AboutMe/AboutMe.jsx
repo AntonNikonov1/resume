@@ -1,30 +1,67 @@
 import React, { useEffect } from 'react'
-import AOS from 'aos'
-import "aos/dist/aos.css";
-// import '../../svg'
+import InfoBoard from '../InfoBoard/InfoBoard';
+import hacker from '../../svg/Hacker.svg'
+
+// GSAP
+import gsap from 'gsap/gsap-core';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { CSSPlugin } from 'gsap/all'; // Needed to describe styles through GSAP
 
 export const AboutMe = () => {
-    useEffect(() => {
-        AOS.init({ duration: 1000 })
+    gsap.registerPlugin(ScrollTrigger)
+        
+    const scrollTriggerInfo = {
+        trigger: '.about-me',
+        start: 'top center',
+        end: 'bottom top',
+        scrub: true,
+        pin: true,
+        markers: true
+    }
+
+    useEffect(() =>  {
+        gsap.to('.about-me__hacker-icon', {
+            scrollTrigger: scrollTriggerInfo,
+            // duration: 10,
+            opacity: 0
+            // right: '-210px'
+        })
+
+        gsap.to('#aboutMeTitle', {
+            scrollTrigger: scrollTriggerInfo,
+            // duration: 10,
+            opacity: 1,
+            y: 0
+        })
+
+        gsap.to('#aboutMeSubtitle', {
+            scrollTrigger: scrollTriggerInfo,
+            // duration: 10,
+            opacity: 1,
+            y: 0
+        })
     }, [])
-
+ 
     return (
-        <section 
-            // data-aos="fade-down-left"
-            className="about-me"
-        >
-            <h2 className="title" data-aos="fade-down">Мое обучение</h2>
-            
-            <ul className="subtitle-list" data-aos="fade-up">
-                <li className="subtitle-item">Закончил курсы frontend в Den It</li>
-                <li className="subtitle-item">Обучаюсь заочно в Польском вузе на IT</li>
-            </ul>
-
-             <img 
-                src="svg/haker.svg" 
-                alt="hacker"
-                data-aos="fade-left"
+        <section className="about-me">
+            <InfoBoard 
+                title="Shortly about myself:"
+                idTitleAnimation="aboutMeTitle"
+                subtitle={[
+                    'Finished frontend courses at Den It',
+                    'React development for two months,',
+                    'Have experience working in a team and with git'
+                ]}
+                idSubtitleAnimation="aboutMeSubtitle"
+                checkMark
             />
+
+            <object 
+                data={hacker} 
+                type="image/svg+xml"
+                className="about-me__hacker-icon"
+                >    
+            </object>
         </section>
     )
 }

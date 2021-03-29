@@ -6,8 +6,8 @@ export const Welcome = () => (
         <Typist cursor={{show: false}}>
             <h1 className="welcome__title" >
                 <span>
-                    <span>&lt;</span>
-                    <span>Welcome</span>
+                    <span className="welcome__tag">&lt;</span>
+                    <span className="welcome__tag">Welcome</span>
                         <span className="attribute">
                             <span>name</span>
                             <span className="equal-sign">=</span>
@@ -18,7 +18,7 @@ export const Welcome = () => (
                             <span className="equal-sign">=</span>
                             <span className="attribute-value">"Nikonov"</span>
                         </span>
-                    <span>&gt;</span>
+                    <span className="welcome__tag">&gt;</span>
                 </span>
             </h1>
 

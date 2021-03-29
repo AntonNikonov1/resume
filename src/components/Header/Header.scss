@@ -6,14 +6,18 @@
 
     background-color: $black;
     box-shadow: -4px 6px 45px 40px #0e1212;
+    z-index: 10;
 
-    width: $desktop;
+    width: 100vw;
 
     padding: 20px 0;
 
     &__nav {
         display: flex;
         justify-content: space-between;
+
+        width: $desktop;
+        margin: 0 auto;
 
         &-logo {
             color: $blue;

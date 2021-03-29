@@ -1,0 +1,18 @@
+.title {
+    transform: translateY(-100vh);
+    opacity: 0;
+    color: $blue;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.subtitle-list {
+    transform: translateY(100vh);
+    opacity: 0;
+
+    margin-top: 25px;
+}
+
+.subtitle-item + .subtitle-item {
+    margin-top: 10px;
+}

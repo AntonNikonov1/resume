@@ -10,6 +10,7 @@ body {
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
     background-color: $black;
+    overflow-x: hidden;
 }
 
 a {
@@ -22,16 +23,6 @@ a {
     margin: 0 auto;
 }
 
-.title {
-    color: $blue;
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.subtitle-list {
-    margin-top: 15px;
-}
-
-.subtitle-item + .subtitle-item {
-    margin-top: 10px;
+.main-content {
+    margin-left: 150px;
 }
